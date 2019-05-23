@@ -1,0 +1,17 @@
+<div id="container">
+  <div id="text">
+    <div class="example-container">
+      <h3 id="thanks">Your feedback can help us stop fighting, we thank you already!</h3>
+      <div id="feedid">
+        <mat-form-field>
+          <input matInput placeholder="Feedback" name="message" [(ngModel)]=message>
+        </mat-form-field><br>
+        <mat-form-field>
+          <input matInput placeholder="Name" name="username" [(ngModel)]=username>
+        </mat-form-field><br>
+        <button id="button" mat-raised-button color="accent" (click)="sendFb()"
+          matTooltip="Send your feedback">Send feedback</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+#container{
+  margin: 5%;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.9;
+  border-radius: 15px;
+  padding-bottom: 50px;
+}
+#text{
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+  /* opacity: 1; */
+}
+#button{
+  opacity: 1 !important;
+}
+strong{
+  text-decoration: underline;
+
+}
+li{
+  list-style-type: none;
+}

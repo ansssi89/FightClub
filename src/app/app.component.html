@@ -1,0 +1,15 @@
+<router-outlet></router-outlet>
+<button id="button" mat-fab [matMenuTriggerFor]="menu" matTooltip="Here you can navigate in the app" aria-label="Navigation menu">Menu</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item><a  class="nav-link" routerLink="/home">Home</a></button>
+  <button mat-menu-item><a  class="nav-link" routerLink="/about">About</a></button>
+  <button mat-menu-item><a  class="nav-link" routerLink="/fight">Food fight</a></button>
+  <button mat-menu-item><a  class="nav-link" routerLink="/feedback">Feedback</a></button>
+  <button mat-menu-item><a  class="nav-link" routerLink="/nac">Schedule day</a></button>
+</mat-menu>
+
+
+
+
+
+

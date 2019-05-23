@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+html, body { 
+  height: 100%; 
+  background-image: url('https://images.pexels.com/photos/1135454/pexels-photo-1135454.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-position: 60% 50%;
+}
+body { 
+  margin: 0; 
+  font-family: 'Montserrat', sans-serif;
+  
+}
+#container{
+  margin: 20px;
+  background-color: #ffffff;
+  /* border: 1px solid black; */
+  /* opacity: 0.9; */
+  border-radius: 15px;
+  /* padding-bottom: 50px; */
+}

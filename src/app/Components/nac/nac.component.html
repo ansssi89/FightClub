@@ -1,0 +1,92 @@
+<div id="container">
+    <div id="text">
+      <div class="menus">
+        <h2>Let's schedule your day</h2>
+        <div [ngStyle]="menu" style="width: 100%">
+          <div id="playerOne">
+            <p>Player 1</p>
+            <label>In the morning</label><br>
+            <mat-select placeholder="Breakfast" style="width:150px;" [(ngModel)]="pOneBreakfast">
+              <mat-option *ngFor="let food of breakfast" value="{{food}}">{{food}}</mat-option>
+            </mat-select>
+            <br>
+            <mat-select placeholder="Morning todo" style="width:150px;" [(ngModel)]="pOneMorChore">
+              <mat-option *ngFor="let chore of chores" value="{{chore}}">{{chore}}</mat-option>
+            </mat-select>
+            <hr>
+            <br>
+            <label>During the day</label><br>
+            <mat-select placeholder="Lunch" style="width:150px;" [(ngModel)]="pOneLunch">
+              <mat-option *ngFor="let food of lunch" value="{{food}}">{{food}}</mat-option>
+            </mat-select>
+            <br>
+            <mat-select placeholder="Todo today" style="width:150px;" [(ngModel)]="pOneDayChore">
+              <mat-option *ngFor="let chore of chores" value="{{chore}}">{{chore}}</mat-option>
+            </mat-select>
+            <hr>
+            <br>
+            <label>In the evening</label><br>
+            <mat-select placeholder="Dinner" style="width:150px;" [(ngModel)]="pOneDinner">
+              <mat-option *ngFor="let food of dinner" value="{{food}}">{{food}}</mat-option>
+            </mat-select>
+            <br>
+            <mat-select placeholder="Night is young" style="width:150px;" [(ngModel)]="pOneEveChore">
+              <mat-option *ngFor="let chore of chores" value="{{chore}}">{{chore}}</mat-option>
+            </mat-select>
+            <hr>
+          </div>
+          <div id="playerTwo">
+            <p>Player 2</p>
+            <br>
+            <!-- <label class="hide">In the morning</label><br> -->
+            <mat-select placeholder="Breakfast" style="width:150px;" [(ngModel)]="pTwoBreakfast">
+              <mat-option *ngFor="let food of breakfast" value="{{food}}">{{food}}</mat-option>
+            </mat-select>
+            <br>
+            <mat-select placeholder="Morning todo" style="width:150px;" [(ngModel)]="pTwoMorChore">
+              <mat-option *ngFor="let chore of chores" value="{{chore}}">{{chore}}</mat-option>
+            </mat-select>
+            <hr>
+            <br>
+            <br>
+            <!-- <label class="hide">During the day</label><br> -->
+            <mat-select placeholder="Lunch" style="width:150px;" [(ngModel)]="pTwoLunch">
+              <mat-option *ngFor="let food of lunch" value="{{food}}">{{food}}</mat-option>
+            </mat-select>
+            <br>
+            <mat-select placeholder="Todo today" style="width:150px;" [(ngModel)]="pTwoDayChore">
+              <mat-option *ngFor="let chore of chores" value="{{chore}}">{{chore}}</mat-option>
+            </mat-select>
+            <hr>
+            <br>
+            <br>
+            <!-- <label class="hide">In the evening</label><br> -->
+            <mat-select placeholder="Dinner" style="width:150px;" [(ngModel)]="pTwoDinner">
+              <mat-option *ngFor="let food of dinner" value="{{food}}">{{food}}</mat-option>
+            </mat-select>
+            <br>
+            <mat-select placeholder="Night is young" style="width:150px;" [(ngModel)]="pTwoEveChore">
+              <mat-option *ngFor="let chore of chores" value="{{chore}}">{{chore}}</mat-option>
+            </mat-select>
+            <hr>
+          </div>
+          <button mat-raised-button color="accent" (click)=test()>Reveal the day</button>
+        </div>
+        <div>
+  
+          <h2 [ngStyle]="scheduleHeader">Here's your schedule</h2>
+          <h3 [ngStyle]="morningHeader"> ☀️ In the morning you will...</h3>
+          <p [ngStyle]="morningTodo">Your breakfast is <strong>{{breakfastWin}}</strong> and you have to
+            <strong>{{morChoreWin}}</strong> </p>
+          <h3 [ngStyle]="dayHeader"> 🎭Let's see the choosings for the noon: </h3>
+          <p [ngStyle]="dayTodo">Lunch or brunch <strong>{{lunchWin}}</strong>, hope you love to
+            <strong>{{dayChoreWin}}</strong></p>
+          <h3 [ngStyle]="eveHeader">💃 In the evening y'all</h3>
+          <p [ngStyle]="eveTodo">Enjoy <strong>{{dinnerWin}}</strong> and have fun while you
+            <strong>{{eveChoreWin}}</strong>
+          </p>
+          <p [ngStyle]="eveTodo">Remember to take a screenshot of this page!</p>
+        </div>
+      </div>
+    </div>
+  </div>

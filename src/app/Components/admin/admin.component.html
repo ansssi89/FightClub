@@ -1,0 +1,29 @@
+<div id="container">
+  <div id="text">
+    <h2>Live feedback from our customers!</h2>
+    <ul>
+      <li *ngFor="let feedback of data"><button class="rembutton"
+          (click)=delFb(feedback)>X</button>Message: {{feedback.message}}<br><i>Sender: {{feedback.username}}</i></li>
+    </ul>
+    <hr>
+    <div class="example-container">
+      <h2>Foods</h2>
+      <h4>Add a food category</h4>
+      <mat-form-field>
+        <input matInput placeholder="Name" name="name" [(ngModel)]=name>
+      </mat-form-field><br>
+      <mat-form-field>
+        <input matInput placeholder="Emoji" name="emoji" [(ngModel)]=emoji>
+      </mat-form-field><br>
+      <button id="button" mat-raised-button color="accent" (click)="addCategory()"
+        matTooltip="Send your feedback">Add new category</button>
+      <h4>Remove food categories</h4>
+      <p>If list is not visible, use refresh</p>
+      <ul>
+        <li *ngFor="let food of food" value={{food.name}}><button class="rembutton"
+            (click)=delFood(food)>X</button>{{food.emoji}}{{ food.name }}</li>
+      </ul>
+
+    </div>
+  </div>
+</div>

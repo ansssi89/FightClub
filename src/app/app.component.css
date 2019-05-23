@@ -1,0 +1,8 @@
+a{
+  color: black;
+}
+button{
+  position: relative;
+  float: right;
+  cursor: pointer;
+}

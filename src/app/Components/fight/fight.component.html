@@ -1,0 +1,64 @@
+<div id="container">
+  <div id="text">
+    <h4>Good Luck!</h4>
+    <p>You will both choose your desired food from the boxes below.</p>
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState= false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Player One
+          </mat-panel-title>
+          <mat-panel-description>
+            {{playerOneSelection}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-label>Pick from the menu</mat-label>
+        <mat-select [(ngModel)]="playerOneSelection">
+          <mat-option *ngFor="let food of data" value={{food.name}}>{{food.emoji}}{{ food.name }}</mat-option>
+        </mat-select>
+      </mat-expansion-panel>
+    </mat-accordion>
+    <br>
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState= false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Player Two
+          </mat-panel-title>
+          <mat-panel-description>
+            {{playerTwoSelection}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-label>Choose wisely</mat-label>
+        <mat-select [(ngModel)]="playerTwoSelection">
+          <mat-option *ngFor="let food of data" value={{food.name}}>{{food.emoji}}{{ food.name }}</mat-option>
+        </mat-select>
+      </mat-expansion-panel>
+    </mat-accordion>
+    <br>
+    <br>
+    <p>Click the button below to let our unbelievable algorithm to make its magic.</p>
+    <button id="button" mat-raised-button color="accent" (click)="revealWinner()"
+      matTooltip="After you have picked your favorites, click here">Click</button>
+    <br><br>
+    <!-- <h2>{{countdown}}</h2> -->
+    <h2 [ngStyle]="textStyle">The winner is <strong>{{winner}}</strong></h2>
+    <h4 [ngStyle]="againStyle">Best out of three? Just click above again!</h4>
+
+    <!-- <img id="image" [ngStyle]="picStyle" src="http://24.media.tumblr.com/tumblr_lzny4eOI121qa5rnho1_500.gif"
+      alt="fightscene" height="175"> -->
+    <div>
+      <button id="button" mat-raised-button color="accent" [ngStyle]="buttonStyle"
+        matTooltip="When you click here, Google will assist you to the nearest restaurant" (click)="redirect()">Show me
+        the way in
+        Google</button>
+      </div>
+  </div>
+
+
+
+
+
+</div>
+
+<!-- Flex layout päivitys, muista tämä jos flex layout versio on 5.*.* -->
